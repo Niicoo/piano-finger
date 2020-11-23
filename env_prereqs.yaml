@@ -1,0 +1,10 @@
+name: piano_env
+channels:
+  - roebel
+  - conda-forge
+  - anaconda
+dependencies:
+  - python>=3.*
+  - anaconda::numpy
+  - roebel::mido
+  - conda-forge::opencv

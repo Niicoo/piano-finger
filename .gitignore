@@ -1,0 +1,7 @@
+*
+!.gitignore
+!README.md
+!generate_video.py
+!env_prereqs.yaml
+!demo.png
+!LICENSE
