@@ -27,13 +27,13 @@ For help, type `python generate_video.py --help`
 3. Resize the video using ffmpeg
 `ffmpeg -i music.mp4 -s 1920x1080 -c:a copy music_full_hd.mp4`
 
-4. Add the sound to the video using ffmpeg
-`ffmpeg -i music_full_hd.mp4 -itsoffset 3.0 -i music.wav -c:v copy -map 0:v:0 -map 1:a:0 -c:a aac -b:a 192k music_full_hd_with_sound.mp4`
-Important remark 1: The `itoffset` value need to correspond to the value used for generating the video [by default: 3 seconds]
-Important remark 2: The `itoffset` argument may a glitch in the video, if you don't want that, you can first add a silence to the audio and then run this command without the `itoffset` argument.
-Example:
-`ffmpeg -i music.wav -af "adelay=3s:all=true" music_delayed.wav`
-`ffmpeg -i music_full_hd.mp4 -i music_delayed.wav -c:v copy -map 0:v:0 -map 1:a:0 -c:a aac -b:a 192k music_full_hd_with_sound.mp4`
+4. Add the sound to the video using ffmpeg  
+`ffmpeg -i music_full_hd.mp4 -itsoffset 3.0 -i music.wav -c:v copy -map 0:v:0 -map 1:a:0 -c:a aac -b:a 192k music_full_hd_with_sound.mp4`  
+Important remark 1: The `itoffset` value need to correspond to the value used for generating the video [by default: 3 seconds].  
+Important remark 2: The `itoffset` argument may a glitch in the video, if you don't want that, you can first add a silence to the audio and then run this command without the `itoffset` argument.  
+Example:  
+`ffmpeg -i music.wav -af "adelay=3s:all=true" music_delayed.wav`  
+`ffmpeg -i music_full_hd.mp4 -i music_delayed.wav -c:v copy -map 0:v:0 -map 1:a:0 -c:a aac -b:a 192k music_full_hd_with_sound.mp4`  
 
 
 # Dependencies
